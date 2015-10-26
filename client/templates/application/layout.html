@@ -1,0 +1,15 @@
+  <!-- //包含 App 的外层布局 -->
+  <template name="layout">
+    <div class="container">
+      <header class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <!-- <a class="navbar-brand" href="/">窦恒山</a> -->
+          <a class="navbar-brand" href="{{pathFor 'postsList'}}">窦恒山</a>
+        </div>
+      </header>
+      <div id="main" class="row-fluid">
+        <!-- //用yield替换postsList模板 -->
+        {{> yield}}
+      </div>
+    </div>
+  </template>
