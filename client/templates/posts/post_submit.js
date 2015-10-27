@@ -7,9 +7,21 @@ Template.postSubmit.events({
       title: $(e.target).find('[name=title]').val()
     };
 
-    post._id = Posts.insert(post);
-// go() 方法将构建一个帖子页面的 URL 提供我们访问
-    Router.go('postPage', post);
+    //直接插入到 Posts 集合的方法
+    // post._id = Posts.insert(post);
+    // Router.go('postPage', post);
+
+    //将调用一个名为 postInsert 的内置方法：插入
+    Meteor.call('postInsert', post, function(error, result) {
+      // 显示错误信息并退出
+      if (error)
+        return alert(error.reason);
+      // 显示结果，跳转页面
+      if (result.postExists)
+        alert('This link has already been posted（该链接已经存在）');
+        // go() 方法将构建一个帖子页面的 URL 提供我们访问
+      Router.go('postPage', {_id: result._id});
+      });
   }
 });
 
