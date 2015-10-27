@@ -1,3 +1,4 @@
+//set pageTitle
 Template.layout.helpers({
   pageTitle: function() {
     Session.set('pageTitle', 'A brand new title');
