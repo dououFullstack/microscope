@@ -11,6 +11,11 @@
       <a class="navbar-brand" href="{{pathFor 'postsList'}}">窦恒山</a>
     </div>
     <div class="collapse navbar-collapse" id="navigation">
+      <!-- 添加创建post的链接 -->
+      <ul class="nav navbar-nav">
+        <li><a href="{{pathFor 'postsList'}}">PostList</a></li>
+        <li><a href="{{pathFor 'postSubmit'}}">Submit Post</a></li>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
         {{> loginButtons}}
       </ul>

@@ -8,7 +8,7 @@ Template.layout.helpers({
 
 // 每次 Session 变量发生变化的时候引发新的警报（alert）
 Tracker.autorun(function() {
-  alert(Session.get('message'));
+  alert(Session.get('pageTitle'));
 });
 
 
