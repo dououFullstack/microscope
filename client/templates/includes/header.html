@@ -14,7 +14,11 @@
       <!-- 添加创建post的链接 -->
       <ul class="nav navbar-nav">
         <li><a href="{{pathFor 'postsList'}}">PostList</a></li>
+        <!-- <li><a href="{{pathFor 'postSubmit'}}">Submit Post</a></li> -->
+        <!-- 当user注销登录之后就隐藏这个链接 -->
+        {{#if currentUser}}
         <li><a href="{{pathFor 'postSubmit'}}">Submit Post</a></li>
+        {{/if}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {{> loginButtons}}
