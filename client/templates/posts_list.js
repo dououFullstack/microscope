@@ -21,6 +21,8 @@ Template.postsList.helpers({
 
   //动态集合
   posts: function() {
-    return Posts.find();
+    // Mongo 数据库的 sort 运算方法，根据这个字段去把对象进行排序，
+    // 并且标识它们是升序还是降序。
+    return Posts.find({}, {sort: {submitted: -1}});
   }
 });

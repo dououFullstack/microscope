@@ -25,7 +25,6 @@ ddp-rate-limiter@1.0.0
 ddp-server@1.2.1
 deps@1.0.9
 diff-sequence@1.0.1
-douhengshan:activities@1.0.0
 ecmascript@0.1.5
 ecmascript-collections@0.1.6
 ejson@1.0.7
@@ -52,6 +51,7 @@ launch-screen@1.0.4
 livedata@1.0.15
 localstorage@1.0.5
 logging@1.0.8
+maodouio:activities@0.0.1
 matb33:collection-hooks@0.8.1
 meteor@1.1.9
 meteor-base@1.0.1
