@@ -1,7 +1,16 @@
 <template name="postItem">
   <div class="post">
     <div class="post-content">
-      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+      <h3><a href="{{url}}">{{title}}</a>
+          <span>{{domain}}</span>
+      </h3>
+      <p>
+          <!-- 添加了一个编辑帖子的链接 -->
+        submitted by {{author}}
+        {{#if ownPost}}
+            <a href="{{pathFor 'postEdit'}}">Edit</a>
+        {{/if}}
+      </p>
     </div>
     <!-- 我们已经把帖子路由规则命名为 postPage ，
                 所以我们可以使用 {{pathFor 'postPage'}} helper ： -->
